@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.activity_main_nav_host_fragment)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_share, R.id.nav_about_us, R.id.nav_program, R.id.nav_radio
+                R.id.homeFragment, R.id.galleryFragment, R.id.shareFragment, R.id.aboutUsFragment, R.id.programFragment, R.id.radioFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -47,37 +47,37 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
                 R.id.nav_home -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.homeFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.homeFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.nav_gallery -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.galleryFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.galleryFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.nav_share -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.shareFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.shareFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.aboutUsFragment -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.aboutUsFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.aboutUsFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.radioFragment -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.radioFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.radioFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.programFragment -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.programFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.programFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.resourcesVideosFragment -> {
-                    findNavController(R.id.activity_main_nav_host_fragment).navigate(R.id.resourcesVideosFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.resourcesVideosFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.activity_main_nav_host_fragment)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
