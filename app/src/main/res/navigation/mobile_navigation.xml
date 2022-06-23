@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ebookfrenzy.one_word.ui.home.HomeFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -20,32 +20,32 @@
 
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.ebookfrenzy.one_word.ui.gallery.GalleryFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/shareFragment"
-        android:name="com.ebookfrenzy.one_word.ui.share.ShareFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.share.ShareFragment"
         android:label="fragment_share"
         tools:layout="@layout/fragment_share" />
     <fragment
         android:id="@+id/radioFragment"
-        android:name="com.ebookfrenzy.one_word.ui.radio.RadioFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.radio.RadioFragment"
         android:label="fragment_radio"
         tools:layout="@layout/fragment_radio" />
     <fragment
         android:id="@+id/programFragment"
-        android:name="com.ebookfrenzy.one_word.ui.program.ProgramFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.program.ProgramFragment"
         android:label="fragment_program"
         tools:layout="@layout/fragment_program" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.ebookfrenzy.one_word.ui.AboutUsFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
     <fragment
         android:id="@+id/resourcesVideosFragment"
-        android:name="com.ebookfrenzy.one_word.ResourcesVideosFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.ResourcesVideosFragment"
         android:label="fragment_resources_videos"
         tools:layout="@layout/fragment_resources_videos" >
         <action
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/mediaPlayerFragment"
-        android:name="com.ebookfrenzy.one_word.ui.mediaPlayer.MediaPlayerFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.mediaPlayer.MediaPlayerFragment"
         android:label="media_player_fragment"
         tools:layout="@layout/media_player_fragment" />
 
