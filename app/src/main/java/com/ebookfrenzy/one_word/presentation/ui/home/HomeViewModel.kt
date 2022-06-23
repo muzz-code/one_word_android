@@ -13,11 +13,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 @HiltViewModel
 class HomeViewModel : ViewModel() {
 
-//    private val _text = MutableLiveData<String>().apply {
-//        value = "This is home Fragment"
-//    }
-//    val text: LiveData<String> = _text
-
     // UI state exposed to the UI
     private val _uiState = MutableStateFlow("This is gallery Fragment")
     val uiState: StateFlow<String> = _uiState.asStateFlow()

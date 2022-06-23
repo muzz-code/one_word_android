@@ -1,10 +1,10 @@
 package com.ebookfrenzy.one_word.util
 
+import com.ebookfrenzy.one_word.R
+import com.ebookfrenzy.one_word.data.model.GalleryData
 import com.ebookfrenzy.one_word.data.model.ResourceDetailVideoModel
 import com.ebookfrenzy.one_word.data.model.ResourceGeneralArticleModel
 import com.ebookfrenzy.one_word.data.model.ResourceGeneralVideoModel
-import com.ebookfrenzy.one_word.R
-import com.ebookfrenzy.one_word.data.model.GalleryData
 
 object ResourceDummyData {
     val galleryList = listOf<GalleryData>(

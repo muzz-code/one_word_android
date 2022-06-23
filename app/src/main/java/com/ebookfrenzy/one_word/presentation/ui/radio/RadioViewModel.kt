@@ -1,4 +1,4 @@
-package com.ebookfrenzy.one_word.presentation.ui.mediaPlayer
+package com.ebookfrenzy.one_word.presentation.ui.radio
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 
 @HiltViewModel
-class MediaPlayerViewModel : ViewModel() {
+class RadioViewModel : ViewModel() {
     // UI state exposed to the UI
     private val _uiState = MutableStateFlow("This is gallery Fragment")
     val uiState: StateFlow<String> = _uiState.asStateFlow()
