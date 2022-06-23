@@ -1,0 +1,73 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
+
+import androidx.recyclerview.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
+
+#parse("File Header.java")
+class ${NAME}(private val interaction: Interaction? = null)
+: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+
+    private val diffCallback = object : DiffUtil.ItemCallback<${Model_Class}>(){
+
+        override fun areItemsTheSame(oldItem: ${Model_Class}, newItem: ${Model_Class}): Boolean {
+            TODO("compare via primary keys")
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: ${Model_Class}, newItem: ${Model_Class}): Boolean {
+            return oldItem == newItem
+        }
+    }
+
+    private val differ = AsyncListDiffer(this, diffCallback)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        TODO("Replace with View Binding")
+        val binding = Binding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return ${ViewHolder_Class}(
+            binding,
+            interaction
+        )
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (holder) {
+            is ${ViewHolder_Class} -> {
+                holder.bind(differ.currentList[position])
+            }
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return differ.currentList.size
+    }
+
+    fun submitList(list: List<${Model_Class}>){
+        differ.submitList(list)
+    }
+
+    class ${ViewHolder_Class} constructor(
+        TODO("Replace with View Binding")
+        private var binding: Binding,
+        private val interaction : Interaction ?
+    ) : RecyclerView.ViewHolder(binding.root){
+
+        fun bind(item: ${Model_Class}) = with(itemView) {
+            itemView.setOnClickListener {
+                interaction?.onItemSelected(adapterPosition, item)
+            }
+
+            TODO("bind view with data")
+        }
+    }
+
+    interface Interaction {
+        fun onItemSelected(position: Int, item: ${Model_Class})
+    }
+}

@@ -1,0 +1,25 @@
+package com.ebookfrenzy.one_word.presentation.ui.share
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.receiveAsFlow
+
+class ShareViewModel : ViewModel() {
+
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is slideshow Fragment"
+    }
+    val text: LiveData<String> = _text
+
+    // UI state exposed to the UI
+    private val _uiState = MutableStateFlow("This is gallery Fragment")
+    val uiState: StateFlow<String> = _uiState.asStateFlow()
+
+    private val _uiEvent = Channel<String>()
+    val uiEvent = _uiEvent.receiveAsFlow()
+}

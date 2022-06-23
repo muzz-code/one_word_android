@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mediaPlayer.MediaPlayerFragment">
+    tools:context=".presentation.ui.mediaPlayer.MediaPlayerFragment">
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/individual_video_screen_fragment_player_view"
