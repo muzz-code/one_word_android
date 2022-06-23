@@ -23,16 +23,16 @@ class MediaPlayerFragment : Fragment() {
 //    private var playBackPosition: Long = 0
 //    private lateinit var videoRecyclerView: RecyclerView
 //
-//    //    private lateinit var videoRvAdapter: ViewAllVideoRvAdapter
+//    private lateinit var videoRvAdapter: ViewAllVideoRvAdapter
 //    private val adapter by lazy { ViewAllVideoRvAdapter(this) }
 //    private lateinit var playbackStateListener: PlaybackStateListener
 //
 //    private var url: String = "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-tailor-working-12528-small.mp4"
-////    companion object {
-////        fun newInstance() = MediaPlayerFragment()
-////    }
-////
-////    private lateinit var viewModel: MediaPlayerViewModel
+//    companion object {
+//        fun newInstance() = MediaPlayerFragment()
+//    }
+//
+//    private lateinit var viewModel: MediaPlayerViewModel
 //
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -46,10 +46,15 @@ class MediaPlayerFragment : Fragment() {
 //        return inflater.inflate(R.layout.media_player_fragment, container, false)
 //    }
 //
-////    override fun onActivityCreated(savedInstanceState: Bundle?) {
-////        super.onActivityCreated(savedInstanceState)
-////        viewModel = ViewModelProvider(this).get(MediaPlayerViewModel::class.java)
-////        // TODO: Use the ViewModel
-////    }
+//    override fun onActivityCreated(savedInstanceState: Bundle?) {
+//        super.onActivityCreated(savedInstanceState)
+//        viewModel = ViewModelProvider(this).get(MediaPlayerViewModel::class.java)
+//        // TODO: Use the ViewModel
+//    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        _binding = null
+//    }
 
 }
