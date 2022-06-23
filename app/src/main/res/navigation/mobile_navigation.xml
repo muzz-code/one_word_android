@@ -11,10 +11,6 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_gallery2"
-            app:destination="@id/nav_gallery"
-            app:enterAnim="@android:anim/slide_in_left" />
-        <action
             android:id="@+id/action_nav_home_to_resourcesVideosFragment"
             app:destination="@id/resourcesVideosFragment" />
         <action
@@ -51,7 +47,11 @@
         android:id="@+id/resourcesVideosFragment"
         android:name="com.ebookfrenzy.one_word.ResourcesVideosFragment"
         android:label="fragment_resources_videos"
-        tools:layout="@layout/fragment_resources_videos" />
+        tools:layout="@layout/fragment_resources_videos" >
+        <action
+            android:id="@+id/action_resourcesVideosFragment_to_mediaPlayerFragment"
+            app:destination="@id/mediaPlayerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mediaPlayerFragment"
         android:name="com.ebookfrenzy.one_word.ui.mediaPlayer.MediaPlayerFragment"

@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fab.setOnClickListener { view ->
-            findNavController().navigate(HomeFragmentDirections.actionNavHomeToMediaPlayerFragment())
+            findNavController().navigate(HomeFragmentDirections.actionNavHomeToResourcesVideosFragment())
         }
     }
 

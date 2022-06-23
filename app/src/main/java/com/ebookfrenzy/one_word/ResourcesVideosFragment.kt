@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ebookfrenzy.one_word.adapter.VideoListAdapter
+import com.ebookfrenzy.one_word.databinding.FragmentHomeBinding
 import com.ebookfrenzy.one_word.databinding.FragmentResourcesVideosBinding
 import util.ResourceDummyData
 
@@ -30,8 +32,9 @@ class ResourcesVideosFragment : Fragment(), VideoListAdapter.Interaction {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_resources_videos, container, false)
+
+        _binding = FragmentResourcesVideosBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,6 +53,7 @@ class ResourcesVideosFragment : Fragment(), VideoListAdapter.Interaction {
     }
 
     override fun onItemSelected(position: Int, item: ResourceGeneralVideoModel) {
+        findNavController().navigate(ResourcesVideosFragmentDirections.actionResourcesVideosFragmentToMediaPlayerFragment())
     }
 
 
