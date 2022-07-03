@@ -8,11 +8,11 @@ import com.ebookfrenzy.one_word.data.model.ResourceGeneralVideoModel
 
 object ResourceDummyData {
     val galleryList = listOf<GalleryData>(
-        GalleryData(1, R.drawable.one_word_logo),
-        GalleryData(2, R.drawable.one_word_logo),
-        GalleryData(3, R.drawable.one_word_logo),
-        GalleryData(4, R.drawable.one_word_logo),
-        GalleryData(5, R.drawable.one_word_logo)
+        GalleryData(1, R.drawable.ocean_view),
+        GalleryData(2, R.drawable.ocean_view),
+        GalleryData(3, R.drawable.ocean_view),
+        GalleryData(4, R.drawable.ocean_view),
+        GalleryData(5, R.drawable.ocean_view)
     )
 
     var videoItem = mutableListOf(

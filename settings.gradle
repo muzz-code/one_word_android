@@ -10,6 +10,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io'
+            credentials {
+                username "muzz-code"
+                password "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"
+            }}
+        jcenter()
     }
 }
 rootProject.name = "one_word"
