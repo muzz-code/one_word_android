@@ -17,4 +17,35 @@
     <string name="about_us">About Us</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
+        \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin
+    </string>
+
+    <string name="short_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+    <string name="medium_lorem_ipsum">Quisque imperdiet nunc at massa dictum volutpat. Etiam id orci ipsum. Integer id ex dignissim</string>
+
+    <string name="long_lorem_ipsum">
+        Duis tellus metus, elementum a lectus id, aliquet interdum mauris. Nam bibendum efficitur sollicitudin. Proin eleifend libero velit, nec fringilla dolor finibus quis. nMorbi eu libero pellentesque, rutrum metus quis, blandit est. Fusce bibendum accumsan nisi vulputate feugiat. In fermentum laoreet euismod. Praesent sem nisl, facilisis eget odio at, rhoncus scelerisque ipsum. Nulla orci dui, dignissim a risus ut, lobortis porttitor velit.
+        \n\nNulla id lectus metus. Maecenas a lorem in odio auctor facilisis non vitae nunc. Sed malesuada volutpat massa. Praesent sit amet lacinia augue, mollis tempor dolor.
+    </string>
+    <string name="roberts">Roberts</string>
+    <string name="miller_w">Miller W</string>
+    <string name="our_team">Our Team</string>
+    <string name="adams_g">Adams G</string>
+    <string name="general_overseer">General Overseer</string>
+    <string name="senior_pastor">Senior Pastor</string>
+    <string name="betty_l">Betty L</string>
+    <string name="zonal_pastor">Zonal Pastor</string>
+    <string name="kevin_john">Kevin John</string>
+    <string name="pastor">Pastor</string>
+    <string name="laura_m">Laura M</string>
+    <string name="mission">Mission</string>
+    <string name="address">Address</string>
+    <string name="_3265_hinkle_deegan_lake_road_dundee">3265 Hinkle Deegan Lake Road, Dundee</string>
+    <string name="new_york_united_state">New York, United State</string>
+    <string name="_14837">14837</string>
 </resources>
