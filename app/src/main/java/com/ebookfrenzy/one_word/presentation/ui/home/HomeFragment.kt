@@ -12,7 +12,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.ebookfrenzy.one_word.R
 import com.ebookfrenzy.one_word.databinding.FragmentHomeBinding
-//import com.ebookfrenzy.one_word.presentation.adapter.CardViewStackAdapter
+import com.ebookfrenzy.one_word.presentation.adapter.CardViewStackAdapter
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager
 import com.yuyakaido.android.cardstackview.CardStackListener
 import com.yuyakaido.android.cardstackview.CardStackView

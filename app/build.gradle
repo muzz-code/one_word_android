@@ -76,7 +76,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
 
-//    // stack card view
-//    implementation "com.yuyakaido.android:card-stack-view:2.3.3"
+    // stack card view
+    implementation "com.yuyakaido.android:card-stack-view:2.3.3"
 
 }

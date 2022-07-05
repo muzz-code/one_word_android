@@ -7,10 +7,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
-import javax.inject.Inject
 
 @HiltViewModel
-class ProgramViewModel @Inject constructor (): ViewModel() {
+class ProgramViewModel : ViewModel() {
     // UI state exposed to the UI
     private val _uiState = MutableStateFlow("This is gallery Fragment")
     val uiState: StateFlow<String> = _uiState.asStateFlow()
