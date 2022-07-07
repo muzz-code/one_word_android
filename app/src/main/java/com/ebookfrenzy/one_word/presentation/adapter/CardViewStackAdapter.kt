@@ -47,6 +47,7 @@ class CardViewStackAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
+
     fun submitList(list: List<CardViewData>) {
         differ.submitList(list)
     }

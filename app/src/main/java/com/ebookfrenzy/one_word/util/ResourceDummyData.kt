@@ -1,10 +1,7 @@
 package com.ebookfrenzy.one_word.util
 
 import com.ebookfrenzy.one_word.R
-import com.ebookfrenzy.one_word.data.model.GalleryData
-import com.ebookfrenzy.one_word.data.model.ResourceDetailVideoModel
-import com.ebookfrenzy.one_word.data.model.ResourceGeneralArticleModel
-import com.ebookfrenzy.one_word.data.model.ResourceGeneralVideoModel
+import com.ebookfrenzy.one_word.data.model.*
 
 object ResourceDummyData {
     val galleryList = listOf<GalleryData>(
@@ -13,6 +10,17 @@ object ResourceDummyData {
         GalleryData(3, R.drawable.ocean_view),
         GalleryData(4, R.drawable.ocean_view),
         GalleryData(5, R.drawable.ocean_view)
+    )
+
+    /**
+     * this is a sample dummy data for the stacking cards on homeFragment
+     * */
+    val cardViewDummyData = listOf(
+        CardViewData( R.drawable.ocean_view),
+        CardViewData( R.drawable.ocean_view),
+        CardViewData( R.drawable.ocean_view),
+        CardViewData( R.drawable.ocean_view),
+        CardViewData( R.drawable.ocean_view)
     )
 
     var videoItem = mutableListOf(

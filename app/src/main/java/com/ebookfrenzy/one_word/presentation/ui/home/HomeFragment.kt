@@ -20,6 +20,7 @@ import animation.startAnimation
 import com.ebookfrenzy.one_word.R
 import com.ebookfrenzy.one_word.databinding.FragmentHomeBinding
 import com.ebookfrenzy.one_word.presentation.adapter.CardViewStackAdapter
+import com.ebookfrenzy.one_word.util.ResourceDummyData
 import com.yuyakaido.android.cardstackview.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -35,7 +36,7 @@ class HomeFragment : Fragment(), CardStackListener {
     private val homeViewModel: HomeViewModel by viewModels()
     private lateinit var cardStackView: CardStackView
     private lateinit var manager: CardStackLayoutManager
-    private val adapter by lazy { CardViewStackAdapter() }
+    private val cardStackAdapter by lazy { CardViewStackAdapter() }
 
 
     override fun onCreateView(
@@ -123,31 +124,21 @@ class HomeFragment : Fragment(), CardStackListener {
                 }
             }
             layoutManager = manager
-            adapter = adapter
+            adapter = cardStackAdapter
+
+            cardStackAdapter.submitList(ResourceDummyData.cardViewDummyData)
         }
     }
 
-    override fun onCardDragging(direction: Direction?, ratio: Float) {
-        TODO("Not yet implemented")
-    }
+    override fun onCardDragging(direction: Direction?, ratio: Float) {}
 
-    override fun onCardSwiped(direction: Direction?) {
-        TODO("Not yet implemented")
-    }
+    override fun onCardSwiped(direction: Direction?) {}
 
-    override fun onCardRewound() {
-        TODO("Not yet implemented")
-    }
+    override fun onCardRewound() {}
 
-    override fun onCardCanceled() {
-        TODO("Not yet implemented")
-    }
+    override fun onCardCanceled() {}
 
-    override fun onCardAppeared(view: View?, position: Int) {
-        TODO("Not yet implemented")
-    }
+    override fun onCardAppeared(view: View?, position: Int) {}
 
-    override fun onCardDisappeared(view: View?, position: Int) {
-        TODO("Not yet implemented")
-    }
+    override fun onCardDisappeared(view: View?, position: Int) {}
 }
