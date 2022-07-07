@@ -17,10 +17,11 @@ object ResourceDummyData {
      * */
     val cardViewDummyData = listOf(
         CardViewData( R.drawable.ocean_view),
-        CardViewData( R.drawable.ocean_view),
-        CardViewData( R.drawable.ocean_view),
-        CardViewData( R.drawable.ocean_view),
-        CardViewData( R.drawable.ocean_view)
+        CardViewData( R.drawable.one_word_logo),
+        CardViewData( R.drawable.photo_female_1),
+        CardViewData( R.drawable.photo_female_2),
+        CardViewData( R.drawable.photo_male_1),
+        CardViewData( R.drawable.photo_male_2)
     )
 
     var videoItem = mutableListOf(
