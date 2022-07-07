@@ -59,6 +59,7 @@ class CardViewStackAdapter(private val interaction: Interaction? = null) :
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: CardViewData) = with(itemView) {
+            binding.cardItemImage.setImageResource(item.cardViewImage)
             itemView.setOnClickListener {
                 interaction?.onItemSelected(absoluteAdapterPosition, item)
             }

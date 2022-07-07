@@ -76,7 +76,7 @@ class HomeFragment : Fragment(), CardStackListener {
         // setup for the card stack view
         cardStackView = binding.stackCardView
         manager = CardStackLayoutManager(requireContext(), this)
-
+        cardStackAdapter.submitList(ResourceDummyData.cardViewDummyData)
         initialize()
 
         // setting the animation on the fab
@@ -128,7 +128,7 @@ class HomeFragment : Fragment(), CardStackListener {
             layoutManager = manager
             adapter = cardStackAdapter
 
-            cardStackAdapter.submitList(ResourceDummyData.cardViewDummyData)
+
         }
     }
 
