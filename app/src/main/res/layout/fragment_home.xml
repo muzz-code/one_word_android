@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_90"
     tools:context=".presentation.ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -18,58 +19,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_begin="33dp" />
 
-    <ImageView
-        android:id="@+id/home_page_signal_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_baseline_rss_feed_24"
-        app:layout_constraintBottom_toBottomOf="@+id/home_page_live_card_view"
-        app:layout_constraintEnd_toEndOf="@+id/home_page_card_view"
-        app:layout_constraintStart_toStartOf="@+id/home_page_live_card_view"
-        app:layout_constraintTop_toTopOf="@+id/home_page_live_card_view" />
+<!--    <ImageView-->
+<!--        android:id="@+id/home_page_signal_icon"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:src="@drawable/ic_baseline_rss_feed_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/home_page_live_card_view"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/home_page_card_view"-->
+<!--        app:layout_constraintHorizontal_bias="0.358"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/home_page_live_card_view"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/home_page_live_card_view"-->
+<!--        app:layout_constraintVertical_bias="0.366" />-->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/home_page_live_card_view"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
-        app:cardBackgroundColor="@color/black"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="-65dp"
+        android:layout_marginLeft="-5dp"
+        app:cardBackgroundColor="@color/grey_60"
         app:layout_constraintBottom_toTopOf="@+id/home_page_card_view"
         app:layout_constraintStart_toStartOf="@+id/home_page_card_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/home_page_live_text_view_two"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/roboto_bold"
-                android:text="LIVE"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+<!--            <TextView-->
+<!--                android:id="@+id/home_page_live_text_view_two"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:fontFamily="@font/roboto_medium"-->
+<!--                android:text="LIVE"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/yellow"-->
+<!--                android:textSize="30sp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/home_page_card_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         app:cardBackgroundColor="@color/yellow"
         app:cardCornerRadius="@dimen/margin_10dp"
         app:cardElevation="@dimen/margin_5dp"
-        app:layout_constraintBottom_toTopOf="@+id/stack_cardView"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:strokeColor="@color/black"
-        app:strokeWidth="@dimen/margin_2dp">
+        app:strokeWidth="@dimen/margin_1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,25 +107,34 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="92dp"
+        android:foregroundGravity="center"
         android:padding="4dp"
         android:paddingVertical="10dp"
-        android:foregroundGravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_page_card_view" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.99"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <View
+        android:id="@+id/circle_anime_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle_anime"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="@+id/home_page_card_view"
+        app:layout_constraintStart_toStartOf="@+id/fab"
+        app:layout_constraintTop_toTopOf="@id/fab" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

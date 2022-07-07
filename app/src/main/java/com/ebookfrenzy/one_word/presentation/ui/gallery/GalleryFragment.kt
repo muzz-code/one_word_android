@@ -63,21 +63,21 @@ class GalleryFragment : Fragment() {
             }
         })
 
-//        lifecycleScope.launch {
-//            repeatOnLifecycle(Lifecycle.State.STARTED){
-//                launch {
-//                    galleryViewModel.uiState.collect{
-//
-//                    }
-//                }
-//
-//                launch {
-//                    galleryViewModel.uiEvent.collect{
-//
-//                    }
-//                }
-//            }
-//        }
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED){
+                launch {
+                    galleryViewModel.uiState.collect{
+
+                    }
+                }
+
+                launch {
+                    galleryViewModel.uiEvent.collect{
+
+                    }
+                }
+            }
+        }
     }
 
     override fun onPause() {
