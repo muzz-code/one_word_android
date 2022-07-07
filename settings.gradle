@@ -12,8 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io'
             credentials {
-                username "muzz-code"
-                password "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"
+                username "Paul-wiseman"
+                password "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"
             }}
         jcenter()
     }

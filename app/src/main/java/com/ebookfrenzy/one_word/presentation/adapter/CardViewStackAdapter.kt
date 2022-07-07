@@ -59,7 +59,7 @@ class CardViewStackAdapter(private val interaction: Interaction? = null) :
 
         fun bind(item: CardViewData) = with(itemView) {
             itemView.setOnClickListener {
-                interaction?.onItemSelected(adapterPosition, item)
+                interaction?.onItemSelected(absoluteAdapterPosition, item)
             }
         }
     }
