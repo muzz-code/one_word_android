@@ -12,20 +12,6 @@ class CardViewStackAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var cardViewData: List<CardViewData> = emptyList()
-//    private val diffCallback = object : DiffUtil.ItemCallback<CardViewData>() {
-//
-//        override fun areItemsTheSame(oldItem: CardViewData, newItem: CardViewData): Boolean {
-//            return oldItem.cardViewImage == newItem.cardViewImage
-//        }
-//
-//        override fun areContentsTheSame(oldItem: CardViewData, newItem: CardViewData): Boolean {
-//            return oldItem == newItem
-//        }
-//
-//    }
-//    private val differ = AsyncListDiffer(this, diffCallback)
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         val binding = CardViewItemsBinding.inflate(
