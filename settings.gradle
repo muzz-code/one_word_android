@@ -10,11 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io'
-            credentials {
-                username "Paul-wiseman"
-                password "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"
-            }}
+        maven { url 'https://jitpack.io'}
         jcenter()
     }
 }
