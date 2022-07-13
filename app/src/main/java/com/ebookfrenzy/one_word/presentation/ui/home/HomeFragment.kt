@@ -16,8 +16,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.DiffUtil
 import animation.startAnimation
 import com.ebookfrenzy.one_word.R
+import com.ebookfrenzy.one_word.data.model.CardViewData
 import com.ebookfrenzy.one_word.databinding.FragmentHomeBinding
 import com.ebookfrenzy.one_word.presentation.adapter.CardViewStackAdapter
 import com.ebookfrenzy.one_word.util.ResourceDummyData
@@ -37,6 +39,8 @@ class HomeFragment : Fragment(), CardStackListener {
     private lateinit var cardStackView: CardStackView
     private lateinit var manager: CardStackLayoutManager
     private val cardStackAdapter by lazy { CardViewStackAdapter() }
+
+    private var dummyRvItems = ResourceDummyData.cardViewDummyData
 
 
     override fun onCreateView(
@@ -66,6 +70,8 @@ class HomeFragment : Fragment(), CardStackListener {
             }
         }
 
+
+
         // setting the animation variable
         val animation =
             AnimationUtils.loadAnimation(requireContext(), R.anim.circle_explosion_anime).apply {
@@ -76,7 +82,7 @@ class HomeFragment : Fragment(), CardStackListener {
         // setup for the card stack view
         cardStackView = binding.stackCardView
         manager = CardStackLayoutManager(requireContext(), this)
-        cardStackAdapter.submitList(ResourceDummyData.cardViewDummyData)
+        cardStackAdapter.submitList(dummyRvItems)
         initialize()
 
         // setting the animation on the fab
@@ -142,5 +148,24 @@ class HomeFragment : Fragment(), CardStackListener {
 
     override fun onCardAppeared(view: View?, position: Int) {}
 
-    override fun onCardDisappeared(view: View?, position: Int) {}
+    override fun onCardDisappeared(view: View?, position: Int) {
+        val item = dummyRvItems[position]
+        addLast(item)
+        dummyRvItems = cardStackAdapter.getCardViewItems()
+
+    }
+
+
+    /**Recycling the last card on the dashboard*/
+    private fun addLast(item: CardViewData) {
+        val old = cardStackAdapter.getCardViewItems()
+        val new = mutableListOf<CardViewData>().apply {
+            addAll(old)
+            addAll(List(1){item})
+        }
+        val callback = CardViewDiffCallback(old, new)
+        val result = DiffUtil.calculateDiff(callback)
+        cardStackAdapter.submitList(new)
+        result.dispatchUpdatesTo(cardStackAdapter)
+    }
 }
