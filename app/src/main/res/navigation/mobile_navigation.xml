@@ -9,10 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="com.ebookfrenzy.one_word.presentation.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_resourcesVideosFragment"
-            app:destination="@id/resourcesVideosFragment" />
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_mediaPlayerFragment"
             app:destination="@id/mediaPlayerFragment" />
@@ -43,15 +40,6 @@
         android:name="com.ebookfrenzy.one_word.presentation.ui.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
-    <fragment
-        android:id="@+id/resourcesVideosFragment"
-        android:name="com.ebookfrenzy.one_word.presentation.ui.ResourcesVideosFragment"
-        android:label="fragment_resources_videos"
-        tools:layout="@layout/fragment_resources_videos" >
-        <action
-            android:id="@+id/action_resourcesVideosFragment_to_mediaPlayerFragment"
-            app:destination="@id/mediaPlayerFragment" />
-    </fragment>
     <fragment
         android:id="@+id/mediaPlayerFragment"
         android:name="com.ebookfrenzy.one_word.presentation.ui.mediaPlayer.MediaPlayerFragment"

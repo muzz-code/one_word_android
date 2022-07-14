@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.shareFragment,
                 R.id.aboutUsFragment,
                 R.id.programFragment,
-                R.id.radioFragment
+                R.id.radioFragment,
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.nav_media_player -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.resourcesVideosFragment)
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.mediaPlayerFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }

@@ -48,4 +48,8 @@
     <string name="_3265_hinkle_deegan_lake_road_dundee">3265 Hinkle Deegan Lake Road, Dundee</string>
     <string name="new_york_united_state">New York, United State</string>
     <string name="_14837">14837</string>
+    <string name="live_stream">Live Stream</string>
+    <string name="program_schedule">Program Schedule</string>
+    <string name="media_url_mp4">https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4</string>
+    <string name="media_url_dash"><![CDATA[https://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0]]></string>
 </resources>

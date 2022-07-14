@@ -52,7 +52,7 @@ class ResourcesVideosFragment : Fragment(), VideoListAdapter.Interaction {
     }
 
     override fun onItemSelected(position: Int, item: ResourceGeneralVideoModel) {
-        findNavController().navigate(ResourcesVideosFragmentDirections.actionResourcesVideosFragmentToMediaPlayerFragment())
+//        findNavController().navigate(ResourcesVideosFragmentDirections.actionResourcesVideosFragmentToMediaPlayerFragment())
     }
 
 
