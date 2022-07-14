@@ -4,6 +4,7 @@ import com.ebookfrenzy.one_word.R
 import com.ebookfrenzy.one_word.data.model.*
 
 object ResourceDummyData {
+    /**this is the dummy data for the gallery page **/
     val galleryList = listOf<GalleryData>(
         GalleryData(1, R.drawable.ocean_view),
         GalleryData(2, R.drawable.ocean_view),
@@ -17,7 +18,7 @@ object ResourceDummyData {
      * */
     val cardViewDummyData = listOf(
         CardViewData( R.drawable.ocean_view),
-        CardViewData( R.drawable.one_word_logo),
+        CardViewData( R.drawable.photo_male_1),
         CardViewData( R.drawable.photo_female_1),
         CardViewData( R.drawable.photo_female_2),
         CardViewData( R.drawable.photo_male_1),
