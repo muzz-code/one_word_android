@@ -17,7 +17,6 @@ object ResourceDummyData {
      * this is a sample dummy data for the stacking cards on homeFragment
      * */
     val cardViewDummyData = listOf(
-        CardViewData( R.drawable.ocean_view),
         CardViewData( R.drawable.photo_male_1),
         CardViewData( R.drawable.photo_female_1),
         CardViewData( R.drawable.photo_female_2),

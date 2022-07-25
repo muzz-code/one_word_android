@@ -10,7 +10,7 @@
         android:id="@+id/video_list_item_card_view"
         android:layout_width="146dp"
         android:layout_height="200dp"
-        app:cardCornerRadius="@dimen/margin_20dp"
+        app:cardCornerRadius="@dimen/margin_10dp"
         app:strokeWidth="@dimen/margin_1dp"
         app:strokeColor="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"

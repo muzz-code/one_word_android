@@ -133,4 +133,6 @@
     <dimen name="text_size_28sp">28sp</dimen>
     <dimen name="text_size_29sp">29sp</dimen>
     <dimen name="text_size_30sp">30sp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
 </resources>

@@ -28,7 +28,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class HomeFragment : Fragment(), CardStackListener {
+class HomeFragment : Fragment(){
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -72,100 +72,88 @@ class HomeFragment : Fragment(), CardStackListener {
 
 
 
-        // setting the animation variable
-        val animation =
-            AnimationUtils.loadAnimation(requireContext(), R.anim.circle_explosion_anime).apply {
-                duration = 400
-                interpolator = AccelerateDecelerateInterpolator()
-            }
-
-        // setup for the card stack view
-        cardStackView = binding.stackCardView
-        manager = CardStackLayoutManager(requireContext(), this)
-        cardStackAdapter.submitList(dummyRvItems)
-        initialize()
-
-        // setting the animation on the fab
-        binding.fab.setOnClickListener {
-
-            // animate when fab is clicked
-            binding.fab.isVisible = false
-            binding.circleAnimeView.isVisible = true
-            binding.circleAnimeView.startAnimation(animation) {
-
-                // navigate after animation
-                findNavController().navigate(HomeFragmentDirections.actionNavHomeToResourcesVideosFragment())
-
-                binding.root.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.grey_10
-                    )
-                )
-            }
-        }
+//        // setting the animation variable
+//        val animation =
+//            AnimationUtils.loadAnimation(requireContext(), R.anim.circle_explosion_anime).apply {
+//                duration = 400
+//                interpolator = AccelerateDecelerateInterpolator()
+//            }
+//
+//        // setup for the card stack view
+//        cardStackView = binding.stackCardView
+//        manager = CardStackLayoutManager(requireContext(), this)
+//        cardStackAdapter.submitList(dummyRvItems)
+//        initialize()
+//
+//        // setting the animation on the fab
+//        binding.fab.setOnClickListener {
+//
+//                // navigate after animation
+//                findNavController().navigate(HomeFragmentDirections.actionNavHomeToResourcesVideosFragment())
+//
+//        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+//
+//    private fun initialize() {
+//        manager.apply {
+//            setStackFrom(StackFrom.Top)
+//            setVisibleCount(2)
+//            setTranslationInterval(12.0f)
+//            setScaleInterval(0.95f)
+//            setSwipeThreshold(0.3f)
+//            setMaxDegree(20.0f)
+//            setDirections(Direction.FREEDOM)
+//            setCanScrollHorizontal(true)
+//            setCanScrollVertical(true)
+//            setSwipeableMethod(SwipeableMethod.AutomaticAndManual)
+//            setOverlayInterpolator(LinearInterpolator())
+//        }
+//        binding.stackCardView.apply {
+//            itemAnimator.apply {
+//                if (this is DefaultItemAnimator) {
+//                    supportsChangeAnimations = false
+//                }
+//            }
+//            layoutManager = manager
+//            adapter = cardStackAdapter
+//
+//
+//        }
+//    }
 
-    private fun initialize() {
-        manager.apply {
-            setStackFrom(StackFrom.Top)
-            setVisibleCount(2)
-            setTranslationInterval(12.0f)
-            setScaleInterval(0.95f)
-            setSwipeThreshold(0.3f)
-            setMaxDegree(20.0f)
-            setDirections(Direction.FREEDOM)
-            setCanScrollHorizontal(true)
-            setCanScrollVertical(true)
-            setSwipeableMethod(SwipeableMethod.AutomaticAndManual)
-            setOverlayInterpolator(LinearInterpolator())
-        }
-        binding.stackCardView.apply {
-            itemAnimator.apply {
-                if (this is DefaultItemAnimator) {
-                    supportsChangeAnimations = false
-                }
-            }
-            layoutManager = manager
-            adapter = cardStackAdapter
+//    override fun onCardDragging(direction: Direction?, ratio: Float) {}
+//
+//    override fun onCardSwiped(direction: Direction?) {}
+//
+//    override fun onCardRewound() {}
+//
+//    override fun onCardCanceled() {}
+//
+//    override fun onCardAppeared(view: View?, position: Int) {}
+//
+//    override fun onCardDisappeared(view: View?, position: Int) {
+//        val item = dummyRvItems[position]
+//        addLast(item)
+//        dummyRvItems = cardStackAdapter.getCardViewItems()
+//
+//    }
 
-
-        }
-    }
-
-    override fun onCardDragging(direction: Direction?, ratio: Float) {}
-
-    override fun onCardSwiped(direction: Direction?) {}
-
-    override fun onCardRewound() {}
-
-    override fun onCardCanceled() {}
-
-    override fun onCardAppeared(view: View?, position: Int) {}
-
-    override fun onCardDisappeared(view: View?, position: Int) {
-        val item = dummyRvItems[position]
-        addLast(item)
-        dummyRvItems = cardStackAdapter.getCardViewItems()
-
-    }
-
-
-    /**Recycling the last card on the dashboard*/
-    private fun addLast(item: CardViewData) {
-        val old = cardStackAdapter.getCardViewItems()
-        val new = mutableListOf<CardViewData>().apply {
-            addAll(old)
-            addAll(List(1){item})
-        }
-        val callback = CardViewDiffCallback(old, new)
-        val result = DiffUtil.calculateDiff(callback)
-        cardStackAdapter.submitList(new)
-        result.dispatchUpdatesTo(cardStackAdapter)
-    }
+//
+//    /**Recycling the last card on the dashboard*/
+//    private fun addLast(item: CardViewData) {
+//        val old = cardStackAdapter.getCardViewItems()
+//        val new = mutableListOf<CardViewData>().apply {
+//            addAll(old)
+//            addAll(List(1){item})
+//        }
+//        val callback = CardViewDiffCallback(old, new)
+//        val result = DiffUtil.calculateDiff(callback)
+//        cardStackAdapter.submitList(new)
+//        result.dispatchUpdatesTo(cardStackAdapter)
+//    }
 }

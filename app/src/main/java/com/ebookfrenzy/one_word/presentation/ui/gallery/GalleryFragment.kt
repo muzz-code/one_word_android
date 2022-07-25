@@ -99,13 +99,13 @@ class GalleryFragment : Fragment() {
         handler = Handler(Looper.myLooper()!!)
         imageList = ArrayList()
 
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
-        imageList.add(R.drawable.ocean_view)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
+        imageList.add(R.drawable.photo_male_1)
 
         galleryAdapter = GalleryAdapter(imageList, viewpager2)
 
