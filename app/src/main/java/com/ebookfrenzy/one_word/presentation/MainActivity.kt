@@ -11,22 +11,23 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import com.ebookfrenzy.one_word.BuildConfig
 import com.ebookfrenzy.one_word.R
 import com.ebookfrenzy.one_word.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+//    val api = BuildConfig.USERNAME
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.appBarMain.toolbar)
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -66,26 +67,22 @@ class MainActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.aboutUsFragment -> {
+                R.id.nav_about_us -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.aboutUsFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.radioFragment -> {
+                R.id.nav_radio -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.radioFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.programFragment -> {
+                R.id.nav_program -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.programFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.resourcesVideosFragment -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.resourcesVideosFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
+
                 else -> return@setNavigationItemSelectedListener true
             }
         }

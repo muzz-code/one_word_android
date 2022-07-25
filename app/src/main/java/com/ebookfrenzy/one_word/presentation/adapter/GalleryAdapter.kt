@@ -1,73 +1,38 @@
 package com.ebookfrenzy.one_word.presentation.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
+import androidx.viewpager2.widget.ViewPager2
 import com.ebookfrenzy.one_word.R
-import com.ebookfrenzy.one_word.data.model.GalleryData
-import com.ebookfrenzy.one_word.databinding.GalleryRecyclerviewItemBinding
 
-class GalleryAdapter(private val interaction: Interaction? = null) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    private val diffCallback = object : DiffUtil.ItemCallback<GalleryData>() {
-
-        override fun areItemsTheSame(oldItem: GalleryData, newItem: GalleryData): Boolean {
-            return oldItem.id == newItem.id
-        }
-
-        override fun areContentsTheSame(oldItem: GalleryData, newItem: GalleryData): Boolean {
-            return oldItem == newItem
-        }
+class GalleryAdapter(private val imageList: ArrayList<Int>, private val viewPager: ViewPager2) :
+    RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder>() {
+    class GalleryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView.findViewById(R.id.gallery_image)
     }
 
-    private val differ = AsyncListDiffer(this, diffCallback)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = GalleryRecyclerviewItemBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
-        )
-        return ViewHolder(
-            binding,
-            interaction
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.gallery_recyclerview_item, parent, false)
+        return GalleryViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is ViewHolder -> {
-                holder.bind(differ.currentList[position])
-            }
+    override fun onBindViewHolder(holder: GalleryViewHolder, position: Int) {
+        holder.imageView.setImageResource(imageList[position])
+        if(position == imageList.size - 1 ){
+            viewPager.post(runnable)
         }
     }
 
     override fun getItemCount(): Int {
-        return differ.currentList.size
+        return imageList.size
     }
 
-    fun submitList(list: List<GalleryData>) {
-        differ.submitList(list)
-    }
-
-    class ViewHolder constructor(
-        private var binding: GalleryRecyclerviewItemBinding,
-        private val interaction: Interaction?
-    ) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(item: GalleryData) = with(itemView) {
-            itemView.setOnClickListener {
-                interaction?.onItemSelected(adapterPosition, item)
-            }
-            binding.galleryImage.load(item.imageUrl) {
-                placeholder(R.drawable.ic_baseline_radio_24)
-            }
-        }
-    }
-
-    interface Interaction {
-        fun onItemSelected(position: Int, item: GalleryData)
+    private val runnable = Runnable {
+        imageList.addAll(imageList)
+        notifyDataSetChanged()
     }
 }

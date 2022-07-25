@@ -3,9 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+        <entry key="app/src/main/res/drawable/home_page_card_view_layout.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/home_page_image_icon_background.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/ic_baseline_tag_faces_24.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/ic_favorite_border.xml" value="0.1745" />
+        <entry key="app/src/main/res/drawable/ic_subject.xml" value="0.1745" />
+=======
+        <entry key="app/src/main/res/drawable/ic_favorite_border.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_subject.xml" value="0.206" />
+>>>>>>> 645ae3322a166bb6709c86c093f81c8e0c542510
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/card_view_items.xml" value="0.2925764192139738" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/fragment_about_us.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/fragment_program.xml" value="0.2359375" />
@@ -13,6 +25,7 @@
         <entry key="app/src/main/res/layout/media_player_fragment.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/video_list.xml" value="0.2359375" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2359375" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.2824074074074074" />
       </map>
     </option>
   </component>
