@@ -6,10 +6,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/gallery_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
         android:src="@drawable/ic_baseline_radio_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

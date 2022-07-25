@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ebookfrenzy.one_word.data.model.GalleryData
 import com.ebookfrenzy.one_word.databinding.FragmentGalleryBinding
 import com.ebookfrenzy.one_word.presentation.adapter.GalleryAdapter
@@ -42,6 +43,7 @@ class GalleryFragment : Fragment(), GalleryAdapter.Interaction {
         val recyclerView = binding.galleryFragmentRecyclerView
 
         recyclerView.adapter = galleryAdapter
+        recyclerView.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         galleryAdapter.submitList(galleryList)
 
         lifecycleScope.launch {

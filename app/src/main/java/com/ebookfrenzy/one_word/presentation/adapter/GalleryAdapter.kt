@@ -61,9 +61,15 @@ class GalleryAdapter(private val interaction: Interaction? = null) :
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
+
+
             binding.galleryImage.load(item.imageUrl) {
                 placeholder(R.drawable.ic_baseline_radio_24)
             }
+//            binding.galleryImage.shapeAppearanceModel
+//                .toBuilder()
+//                .setAllCornerSizes(50f)
+//                .build()
         }
     }
 
