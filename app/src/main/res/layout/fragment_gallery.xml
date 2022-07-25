@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/gallery_recyclerview_item"
         android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:spanCount="3"
         tools:itemCount="10"
         android:paddingStart="20dp"
