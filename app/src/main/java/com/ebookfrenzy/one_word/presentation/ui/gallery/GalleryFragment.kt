@@ -127,7 +127,6 @@ class GalleryFragment : Fragment() {
         viewpager2.setPageTransformer(transformer)
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

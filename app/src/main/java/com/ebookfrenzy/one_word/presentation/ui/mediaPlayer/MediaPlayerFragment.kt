@@ -41,24 +41,26 @@ class MediaPlayerFragment : Fragment(), VideoListAdapter.Interaction  {
     ): View {
         _binding = MediaPlayerFragmentBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                launch {
-                    mediaPlayerViewModel.uiState.collect {
-
-                    }
-                }
-
-                launch {
-                    mediaPlayerViewModel.uiEvent.collect {
-
-                    }
-                }
-            }
+//            repeatOnLifecycle(Lifecycle.State.STARTED) {
+//                launch {
+//                    mediaPlayerViewModel.uiState.collect {
+//
+//                    }
+//                }
+//
+//                launch {
+//                    mediaPlayerViewModel.uiEvent.collect {
+//
+//                    }
+//                }
+//            }
         }
 
         /** initialize the recycler_view **/
