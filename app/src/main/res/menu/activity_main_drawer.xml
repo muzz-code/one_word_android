@@ -6,21 +6,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_round_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_baseline_send_24"
-            android:title="@string/share" />
+            android:id="@+id/nav_media_player"
+            android:icon="@drawable/ic_baseline_play_circle_outline_24"
+            android:title="@string/live_stream" />
 
         <item
             android:id="@+id/nav_program"
             android:icon="@drawable/ic_baseline_calendar_month_24"
-            android:title="Program" />
+            android:title="@string/program_schedule" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
 
         <item
             android:id="@+id/nav_radio"
@@ -31,10 +32,9 @@
             android:id="@+id/nav_about_us"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/about_us" />
-
         <item
-            android:id="@+id/nav_media_player"
-            android:icon="@drawable/ic_baseline_play_circle_outline_24"
-            android:title="@string/about_us" />
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_send_24"
+            android:title="@string/share" />
     </group>
 </menu>

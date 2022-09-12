@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.shareFragment,
                 R.id.aboutUsFragment,
                 R.id.programFragment,
-                R.id.radioFragment
+                R.id.radioFragment,
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -66,23 +66,23 @@ class MainActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.aboutUsFragment -> {
+                R.id.nav_about_us -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.aboutUsFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.radioFragment -> {
+                R.id.nav_radio -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.radioFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.programFragment -> {
+                R.id.nav_program -> {
                     findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.programFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
-                R.id.resourcesVideosFragment -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.resourcesVideosFragment)
+                R.id.nav_media_player -> {
+                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.mediaPlayerFragment)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
