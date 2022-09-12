@@ -13,7 +13,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ShareViewModel @Inject constructor() : ViewModel() {
-
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"
     }

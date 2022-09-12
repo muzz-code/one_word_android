@@ -5,7 +5,10 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
     <dimen name="spacing_xsmall">2dp</dimen>
     <dimen name="spacing_small">3dp</dimen>
     <dimen name="spacing_medium">5dp</dimen>
@@ -24,15 +27,12 @@
 <!--    Dimension -->
     <dimen name="margin_0dp">0dp</dimen>
     <dimen name="margin_1dp">1dp</dimen>
-    <dimen name="margin_2dp">2dp</dimen>
     <dimen name="margin_3dp">3dp</dimen>
     <dimen name="margin_4dp">4dp</dimen>
-    <dimen name="margin_5dp">5dp</dimen>
     <dimen name="margin_6dp">6dp</dimen>
     <dimen name="margin_7dp">7dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_9dp">9dp</dimen>
-    <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_11dp">11dp</dimen>
     <dimen name="margin_12dp">12dp</dimen>
     <dimen name="margin_13dp">13dp</dimen>
@@ -42,7 +42,6 @@
     <dimen name="margin_17dp">17dp</dimen>
     <dimen name="margin_18dp">18dp</dimen>
     <dimen name="margin_19dp">19dp</dimen>
-    <dimen name="margin_20dp">20dp</dimen>
     <dimen name="margin_21dp">21dp</dimen>
     <dimen name="margin_22dp">22dp</dimen>
     <dimen name="margin_23dp">23dp</dimen>
@@ -134,6 +133,6 @@
     <dimen name="text_size_28sp">28sp</dimen>
     <dimen name="text_size_29sp">29sp</dimen>
     <dimen name="text_size_30sp">30sp</dimen>
-
-
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
 </resources>
