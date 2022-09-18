@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/home_page_card_view_layout.xml" value="0.16" />
+        <entry key="app/src/main/res/drawable/home_page_image_icon_background.xml" value="0.122" />
         <entry key="app/src/main/res/drawable/ic_baseline_radio_24.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1205" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1205" />
