@@ -24,7 +24,7 @@ import com.ebookfrenzy.one_word.data.model.CardViewData
 import com.ebookfrenzy.one_word.databinding.FragmentHomeBinding
 import com.ebookfrenzy.one_word.presentation.adapter.CardViewStackAdapter
 import com.ebookfrenzy.one_word.util.ResourceDummyData
-import com.yuyakaido.android.cardstackview.*
+//import com.yuyakaido.android.cardstackview.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -36,8 +36,8 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private val homeViewModel: HomeViewModel by viewModels()
-    private lateinit var cardStackView: CardStackView
-    private lateinit var manager: CardStackLayoutManager
+//    private lateinit var cardStackView: CardStackView
+//    private lateinit var manager: CardStackLayoutManager
     private val cardStackAdapter by lazy { CardViewStackAdapter() }
 
     private var dummyRvItems = ResourceDummyData.cardViewDummyData
@@ -70,10 +70,10 @@ class HomeFragment : Fragment() {
             }
         }
 
-        binding.fab.setOnClickListener {
-            Toast.makeText(requireContext(), "WIL", Toast.LENGTH_SHORT).show()
-//            findNavController().navigate(HomeFragmentDirections.actionNavHomeToResourcesVideosFragment())
-        }
+//        binding.fab.setOnClickListener {
+//            Toast.makeText(requireContext(), "WIL", Toast.LENGTH_SHORT).show()
+////            findNavController().navigate(HomeFragmentDirections.actionNavHomeToResourcesVideosFragment())
+//        }
 
 
 //        // setting the animation variable
