@@ -1,7 +1,7 @@
 package com.ebookfrenzy.one_word.di
 
 import com.ebookfrenzy.one_word.data.remote.ApiService
-import com.ebookfrenzy.one_word.util.Constants.BASE_URL
+import com.ebookfrenzy.one_word.util.Constants.BASE_URL2
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +19,7 @@ object AppModule {
     @Singleton
     fun provideRetrofitService(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_URL2)
             .client(
                 OkHttpClient.Builder()
                     .addInterceptor(HttpLoggingInterceptor().apply {
