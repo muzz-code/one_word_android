@@ -77,7 +77,6 @@ class ProgramFragment : BaseFragment() {
                     is Resource.Success -> {
                         progressDialog.hideProgressDialog()
                         programAdapter.adapter = it.data?.let { it1 -> ProgramAdapter(it1.data) }
-                        Log.d("onProgramReady", "onProgramReady: ${it.data?.data}")
                     }
                     }
                 }
