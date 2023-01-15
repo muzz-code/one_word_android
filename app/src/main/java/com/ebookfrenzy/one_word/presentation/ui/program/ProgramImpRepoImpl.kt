@@ -1,7 +1,6 @@
 package com.ebookfrenzy.one_word.presentation.ui.program
 
-import android.util.Log
-import com.ebookfrenzy.one_word.data.model.ProgramData
+import com.ebookfrenzy.one_word.data.model.ProgramDataResponse
 import com.ebookfrenzy.one_word.data.remote.ApiService
 import com.ebookfrenzy.one_word.util.Resource
 import com.ebookfrenzy.one_word.util.SafeApiCall
@@ -16,7 +15,7 @@ class ProgramImpRepoImpl @Inject constructor( private val apiService: ApiService
 //    override suspend fun getProgram(): Flow<Resource<ResponseWrapper<Data>>> {
 //      return  apiService.getPrograms()
 //    }
-    override suspend fun getProgram(): Flow<Resource<ProgramData>> = flow {
+    override suspend fun getProgram(): Flow<Resource<ProgramDataResponse>> = flow {
         emit(Resource.Loading())
         try {
             val response = safeApiCall { apiService.getPrograms() }

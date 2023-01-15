@@ -1,5 +1,6 @@
 package com.ebookfrenzy.one_word.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.navigation.NavigationView
@@ -14,6 +15,7 @@ import androidx.core.view.GravityCompat
 import com.ebookfrenzy.one_word.BuildConfig
 import com.ebookfrenzy.one_word.R
 import com.ebookfrenzy.one_word.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+        val bottomNavView: BottomNavigationView = binding.appBarMain.contentMain.bottomNavView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -46,50 +49,7 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        navView.setNavigationItemSelectedListener { it ->
-//           showDialog()
-//            Toast.makeText(this, "e work", Toast.LENGTH_SHORT).show()
-
-            when (it.itemId) {
-                R.id.nav_home -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.homeFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_gallery -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.galleryFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_share -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.shareFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_about_us -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.aboutUsFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_radio -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.radioFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_program -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.programFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_media_player -> {
-                    findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.mediaPlayerFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                else -> return@setNavigationItemSelectedListener true
-            }
-        }
+        bottomNavView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

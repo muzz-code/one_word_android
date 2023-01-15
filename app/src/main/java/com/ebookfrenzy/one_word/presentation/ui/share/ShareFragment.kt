@@ -1,5 +1,6 @@
 package com.ebookfrenzy.one_word.presentation.ui.share
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,21 +33,16 @@ class ShareFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                launch {
-                    shareViewModel.uiState.collect {
+        shareApp()
+    }
 
-                    }
-                }
-
-                launch {
-                    shareViewModel.uiEvent.collect {
-
-                    }
-                }
-            }
+    private fun shareApp() {
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "Hey, here is a link to download one word tv")
+            type = "text/plain"
         }
+        startActivity(Intent.createChooser(sendIntent, "Share with"))
     }
 
     override fun onDestroyView() {

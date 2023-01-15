@@ -8,7 +8,8 @@
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/exoplayer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_20dp"/>
 
     <!--    <TextView-->
     <!--        android:id="@+id/individual_video_screen_fragment_video_title_text_view"-->

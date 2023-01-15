@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/mediaPlayerFragment"
+        android:icon="@drawable/ic_baseline_play_circle_outline_24"
+        android:title="@string/live_stream" />
+
+    <item
+        android:id="@+id/programFragment"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="@string/program_schedule" />
+</menu>

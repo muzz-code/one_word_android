@@ -6,31 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.gallery.GalleryFragment">
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/gallery_fragment_recycler_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_margin="8dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        tools:listitem="@layout/gallery_recyclerview_item"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
-<!--        app:spanCount="3"-->
-<!--        tools:itemCount="10"-->
-<!--        android:paddingStart="20dp"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_fragment_recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:paddingHorizontal="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/gallery_recyclerview_item"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="3"
+        tools:itemCount="10"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
