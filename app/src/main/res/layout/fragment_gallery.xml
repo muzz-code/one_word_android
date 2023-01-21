@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.gallery.GalleryFragment">
 
+    <TextView
+        android:id="@+id/gallery_fragment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/menu_gallery"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_fragment_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/gallery_recyclerview_item"
@@ -19,6 +34,6 @@
         tools:itemCount="10"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/gallery_fragment_tv"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

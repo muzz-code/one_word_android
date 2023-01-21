@@ -45,5 +45,10 @@
         android:name="com.ebookfrenzy.one_word.presentation.ui.mediaPlayer.MediaPlayerFragment"
         android:label="media_player_fragment"
         tools:layout="@layout/media_player_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ebookfrenzy.one_word.presentation.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>
