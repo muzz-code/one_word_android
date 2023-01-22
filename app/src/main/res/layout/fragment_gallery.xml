@@ -20,6 +20,17 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <View
+        android:id="@+id/gallery_fragment_line_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@color/grey_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gallery_fragment_tv" />
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_fragment_recycler_view"
@@ -34,6 +45,6 @@
         tools:itemCount="10"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gallery_fragment_tv"/>
+        app:layout_constraintTop_toBottomOf="@id/gallery_fragment_line_divider"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

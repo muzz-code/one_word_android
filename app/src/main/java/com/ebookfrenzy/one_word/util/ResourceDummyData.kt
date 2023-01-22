@@ -141,4 +141,13 @@ object ResourceDummyData {
             R.drawable.one_word_logo
         )
     )
+
+    val settingsList = arrayListOf(
+        SettingsItems(
+            R.drawable.ic_lock, "Privacy Policy", R.drawable.ic_right_arrow,0
+        ),
+        SettingsItems(
+            R.drawable.ic_baseline_send_24, "Share", R.drawable.ic_right_arrow,1
+        )
+    )
 }
