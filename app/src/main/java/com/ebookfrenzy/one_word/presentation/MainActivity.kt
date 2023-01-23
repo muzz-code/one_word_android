@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
-                R.id.radioFragment,R.id.galleryFragment,
+                R.id.radioFragment,R.id.galleryFragment, R.id.privacyPolicyFragment,
                 R.id.aboutUsFragment,R.id.settingsFragment -> {
                     bottomNavView.hideView()
                 }
