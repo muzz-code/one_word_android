@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/gallery_root_layout"
     app:cardCornerRadius="@dimen/margin_10dp"
-    android:adjustViewBounds="true"
+    android:layout_marginHorizontal="@dimen/margin_16dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/gallery_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ocean_view" />
 
 </com.google.android.material.card.MaterialCardView>

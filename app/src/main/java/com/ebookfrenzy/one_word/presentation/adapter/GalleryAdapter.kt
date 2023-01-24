@@ -4,35 +4,50 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import coil.load
 import com.ebookfrenzy.one_word.R
+import com.ebookfrenzy.one_word.data.model.GalleryData
+import com.ebookfrenzy.one_word.databinding.GalleryRecyclerviewItemBinding
+import java.io.File
 
-class GalleryAdapter(private val imageList: ArrayList<Int>, private val viewPager: ViewPager2) :
-    RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder>() {
-    class GalleryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.gallery_image)
-    }
+class GalleryAdapter: ListAdapter<GalleryData, GalleryAdapter.ViewHolder>(DiffCallback) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.gallery_recyclerview_item, parent, false)
-        return GalleryViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: GalleryViewHolder, position: Int) {
-        holder.imageView.setImageResource(imageList[position])
-        if(position == imageList.size - 1 ){
-            viewPager.post(runnable)
+    class ViewHolder(val binding: GalleryRecyclerviewItemBinding): RecyclerView.ViewHolder(binding.root) {
+        fun bind(galleryData: GalleryData) {
+            binding.apply {
+                galleryImage.load(galleryData.imageUrl)
+            }
         }
     }
 
-    override fun getItemCount(): Int {
-        return imageList.size
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = GalleryRecyclerviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
-    private val runnable = Runnable {
-        imageList.addAll(imageList)
-        notifyDataSetChanged()
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(getItem(position))
     }
+}
+
+
+object DiffCallback : DiffUtil.ItemCallback<GalleryData>() {
+    override fun areItemsTheSame(
+        oldItem: GalleryData,
+        newItem: GalleryData
+    ): Boolean {
+        return oldItem.id == newItem.id
+    }
+
+    override fun areContentsTheSame(
+        oldItem: GalleryData,
+        newItem: GalleryData
+    ): Boolean {
+        return oldItem == newItem
+    }
+
 }

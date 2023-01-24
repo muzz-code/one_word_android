@@ -8,36 +8,6 @@
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/exoplayer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/individual_video_screen_fragment_video_title_text_view"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="@dimen/margin_12dp"-->
-    <!--        android:text="text"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/individual_video_screen_fragment_player_view" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/individual_video_screen_fragment_video_date_posted_text_view"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="text"-->
-    <!--        android:textSize="9sp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/individual_video_screen_fragment_video_title_text_view" />-->
-
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:id="@+id/individual_video_screen_fragment_recycler_view"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:layout_marginTop="24dp"-->
-    <!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/individual_video_screen_fragment_video_date_posted_text_view" />-->
-
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_20dp"/>
 </FrameLayout>

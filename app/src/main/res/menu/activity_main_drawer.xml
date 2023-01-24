@@ -5,36 +5,32 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/homeFragment"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_media_player"
+            android:id="@+id/mediaPlayerFragment"
             android:icon="@drawable/ic_baseline_play_circle_outline_24"
             android:title="@string/live_stream" />
 
         <item
-            android:id="@+id/nav_program"
+            android:id="@+id/programFragment"
             android:icon="@drawable/ic_baseline_calendar_month_24"
             android:title="@string/program_schedule" />
 
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/galleryFragment"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
 
         <item
-            android:id="@+id/nav_radio"
+            android:id="@+id/radioFragment"
             android:icon="@drawable/ic_baseline_radio_24"
             android:title="@string/radio" />
 
         <item
-            android:id="@+id/nav_about_us"
-            android:icon="@drawable/ic_baseline_person_24"
+            android:id="@+id/aboutUsFragment"
+            android:icon="@drawable/ic_question"
             android:title="@string/about_us" />
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_baseline_send_24"
-            android:title="@string/share" />
     </group>
 </menu>

@@ -5,12 +5,19 @@ import com.ebookfrenzy.one_word.data.model.*
 
 object ResourceDummyData {
     /**this is the dummy data for the gallery page **/
-    val galleryList = listOf<GalleryData>(
+    val galleryList = listOf(
         GalleryData(1, R.drawable.ocean_view),
         GalleryData(2, R.drawable.ocean_view),
         GalleryData(3, R.drawable.ocean_view),
         GalleryData(4, R.drawable.ocean_view),
         GalleryData(5, R.drawable.ocean_view)
+    )
+
+    val upcomingPrograms = listOf(
+        ProgramData ("2023-01-14", "8:00AM", "1", "Sunday Service", R.drawable.ocean_view),
+        ProgramData ("2023-01-14", "8:00AM", "1", "Anointing Service", R.drawable.ocean_view),
+        ProgramData ("2023-01-14", "4:00PM", "1", "Wednesday Service", R.drawable.ocean_view),
+        ProgramData ("2023-01-14", "8:00AM", "1", "Sunday Service", R.drawable.ocean_view)
     )
 
     /**
@@ -132,6 +139,15 @@ object ResourceDummyData {
             "How to perfectly sew attire",
             "1 hour",
             R.drawable.one_word_logo
+        )
+    )
+
+    val settingsList = arrayListOf(
+        SettingsItems(
+            R.drawable.ic_lock, "Privacy Policy", R.drawable.ic_right_arrow,0
+        ),
+        SettingsItems(
+            R.drawable.ic_baseline_send_24, "Share", R.drawable.ic_right_arrow,1
         )
     )
 }
