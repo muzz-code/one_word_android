@@ -6,11 +6,10 @@ import com.ebookfrenzy.one_word.data.model.*
 object ResourceDummyData {
     /**this is the dummy data for the gallery page **/
     val galleryList = listOf(
-        GalleryData(1, R.drawable.ocean_view),
-        GalleryData(2, R.drawable.ocean_view),
-        GalleryData(3, R.drawable.ocean_view),
-        GalleryData(4, R.drawable.ocean_view),
-        GalleryData(5, R.drawable.ocean_view)
+        GalleryData(1, R.drawable.gallery1),
+        GalleryData(2, R.drawable.gallery2),
+        GalleryData(3, R.drawable.gallery3),
+        GalleryData(4, R.drawable.gallery4),
     )
 
     val upcomingPrograms = listOf(
